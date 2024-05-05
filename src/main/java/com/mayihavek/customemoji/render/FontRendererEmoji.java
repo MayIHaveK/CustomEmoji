@@ -15,9 +15,9 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author MayIHaveK
  * @Date 2024/5/5 19:46
  */
-public class FontRendererExt extends FontRenderer {
+public class FontRendererEmoji extends FontRenderer {
 
-    public FontRendererExt(GameSettings gameSettings, ResourceLocation locationFontTexture, TextureManager renderEngine, boolean unicodeFlag)
+    public FontRendererEmoji(GameSettings gameSettings, ResourceLocation locationFontTexture, TextureManager renderEngine, boolean unicodeFlag)
     {
         super(gameSettings, locationFontTexture, renderEngine, unicodeFlag);
     }

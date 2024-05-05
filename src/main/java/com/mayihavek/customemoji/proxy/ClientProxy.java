@@ -2,13 +2,11 @@ package com.mayihavek.customemoji.proxy;
 
 import com.mayihavek.customemoji.config.ConfigLoader;
 import com.mayihavek.customemoji.entity.EmojiEntity;
-import com.mayihavek.customemoji.render.FontRendererExt;
+import com.mayihavek.customemoji.render.FontRendererEmoji;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.IReloadableResourceManager;
 import net.minecraft.util.ResourceLocation;
-
-import java.util.concurrent.ConcurrentHashMap;
 
 public class ClientProxy extends CommonProxy {
     public Minecraft mc;
@@ -16,7 +14,7 @@ public class ClientProxy extends CommonProxy {
     @Override
     public void init(FMLInitializationEvent event) {
         mc = Minecraft.getMinecraft();
-        FontRendererExt fontRenderer = new FontRendererExt(mc.gameSettings, new ResourceLocation("textures/font/ascii.png"), mc.renderEngine, false);
+        FontRendererEmoji fontRenderer = new FontRendererEmoji(mc.gameSettings, new ResourceLocation("textures/font/ascii.png"), mc.renderEngine, false);
         fontRenderer.setUnicodeFlag(mc.func_152349_b());
         fontRenderer.setBidiFlag(mc.getLanguageManager().isCurrentLanguageBidirectional());
         ((IReloadableResourceManager)mc.getResourceManager()).registerReloadListener(fontRenderer);
