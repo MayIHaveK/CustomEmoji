@@ -35,4 +35,6 @@
  */
 dependencies {
     runtimeOnlyNonPublishable("com.github.GTNewHorizons:NotEnoughItems:2.5.4-GTNH:dev")
+
+    api group: 'com.madgag', name: 'animated-gif-lib', version: '1.4'
 }

@@ -1,15 +1,15 @@
 package com.mayihavek.customemoji;
 
 import com.mayihavek.customemoji.proxy.CommonProxy;
+import cpw.mods.fml.common.event.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.event.FMLServerStartingEvent;
+
+import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 
 @Mod(modid = Main.MODID, version = Main.VERSION, name = Main.NAME,  acceptedMinecraftVersions = "[1.7.10]")
 public class Main {
@@ -32,7 +32,7 @@ public class Main {
 
     @Mod.EventHandler
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes." (Remove if not needed)
-    public void init(FMLInitializationEvent event) {
+    public void init(FMLInitializationEvent event) throws IOException, NoSuchAlgorithmException {
         proxy.init(event);
     }
 
@@ -47,4 +47,7 @@ public class Main {
     public void serverStarting(FMLServerStartingEvent event) {
         proxy.serverStarting(event);
     }
+
+    @Mod.EventHandler
+    public void serverStarted(FMLServerStartedEvent event) {proxy.serverStarted(event);}
 }

@@ -3,3 +3,15 @@
 plugins {
     id 'com.gtnewhorizons.gtnhconvention'
 }
+jar {
+    // 添加多个依赖，搜索方式为 名字包含关键词
+    from {
+        configurations.compileClasspath.findAll {
+            // 搜索条件
+            it.name.contains('animated-gif-lib')
+        }.collect {
+            // 处理搜索结果
+            zipTree it
+        }
+    }
+}

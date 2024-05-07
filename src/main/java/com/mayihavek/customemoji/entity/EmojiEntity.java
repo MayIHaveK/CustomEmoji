@@ -13,12 +13,24 @@ public class EmojiEntity {
     public int index;
     public float dw;
     public float dh;
+    public String type;
+    public GifImageEntity gifImageEntity;
 
-    public EmojiEntity(String emojiName, int index,float dw,float dh) {
+    public EmojiEntity(String emojiName, int index,float dw,float dh,String type) {
         this.emojiName = emojiName;
         this.index = index;
         this.dw = dw;
         this.dh = dh;
+        this.type = type;
+    }
+
+    public EmojiEntity(String emojiName, int index, float dw, float dh, String type, GifImageEntity gifImageEntity) {
+        this.emojiName = emojiName;
+        this.index = index;
+        this.dw = dw;
+        this.dh = dh;
+        this.type = type;
+        this.gifImageEntity = gifImageEntity;
     }
 
     public String getEmojiName() {
@@ -51,5 +63,21 @@ public class EmojiEntity {
 
     public void setDh(float dh) {
         this.dh = dh;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public GifImageEntity getGifImageEntity() {
+        return gifImageEntity;
+    }
+
+    public void setGifImageEntity(GifImageEntity gifImageEntity) {
+        this.gifImageEntity = gifImageEntity;
     }
 }
