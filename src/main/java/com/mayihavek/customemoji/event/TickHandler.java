@@ -1,6 +1,8 @@
 package com.mayihavek.customemoji.event;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.gameevent.TickEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -11,12 +13,11 @@ import net.minecraftforge.common.MinecraftForge;
 public class TickHandler {
 
     public void init(){
-        //弃用，不需要了
-        //MinecraftForge.EVENT_BUS.register(this);
+        FMLCommonHandler.instance().bus().register(this);
     }
     public static long time = 0;
     @SubscribeEvent
-    public void onTick(RenderGameOverlayEvent.Text event){{
+    public void onTick(TickEvent.ClientTickEvent event){{
         time++;
     }}
 

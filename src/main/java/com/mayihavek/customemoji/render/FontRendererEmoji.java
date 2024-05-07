@@ -168,7 +168,6 @@ public class FontRendererEmoji extends FontRenderer {
                 doDraw(f);
             }
         }
-        TickHandler.time++;
     }
 
     private float renderCharAtPos(int index, char c, boolean hasShadow,float dw, float dh)

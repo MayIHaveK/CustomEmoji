@@ -37,7 +37,7 @@ public class ClientProxy extends CommonProxy {
         fontRenderer.setBidiFlag(mc.getLanguageManager().isCurrentLanguageBidirectional());
         ((IReloadableResourceManager)mc.getResourceManager()).registerReloadListener(fontRenderer);
         mc.fontRenderer = fontRenderer;
-        //new TickHandler().init();
+        new TickHandler().init();
         loadEmoji();
 
     }
