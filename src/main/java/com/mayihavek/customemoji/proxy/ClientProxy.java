@@ -29,7 +29,9 @@ public class ClientProxy extends CommonProxy {
             String[] split = list[i].split(judgeChar);
             String name = split[0];
             int index = Integer.parseInt(split[1]);
-            EmojiEntity entity = new EmojiEntity(name,index);
+            float dw = Float.parseFloat(split[2]);
+            float dh = Float.parseFloat(split[3]);
+            EmojiEntity entity = new EmojiEntity(name,index,dw,dh);
             EmojiEntity.emojiMap.put(name,entity);
             EmojiEntity.emojiIndexMap.put(index,entity);
         }
