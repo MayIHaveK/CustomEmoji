@@ -50,4 +50,8 @@ general {
 ~~~
 
 ## 效果展示
-
+![静态图片](images/img.png "")
+![静态图片](images/img_1.png "")
+![静态图片](images/img_2.png "")
+![静态图片](images/img_3.png "")
+![动态图片](images/recording.gif "")
