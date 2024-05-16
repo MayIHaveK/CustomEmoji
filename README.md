@@ -7,7 +7,7 @@
 制作表情的步骤如下：
 
 1. 将 mod 使用压缩软件打开，找到 “assets\customemoji\textures” 目录，将表情需要使用到的贴图素材添加到其中(.png)。
-2. 在 “。minecraft\config\" 目录下找到文件 ”customemoji.cfg“ 进行修改.
+2. 在 “.minecraft\config\" 目录下找到文件 ”customemoji.cfg“ 进行修改.
 
 ## 配置文件
 ~~~cfg
