@@ -18,13 +18,13 @@ import java.util.concurrent.ConcurrentHashMap;
  * @Date 2024/5/5 19:46
  */
 public class FontRendererEmoji extends FontRenderer {
+    //在本类中重新覆写变量
 
-
+    protected int[] charWidth = new int[256];
     public FontRendererEmoji(GameSettings gameSettings, ResourceLocation locationFontTexture, TextureManager renderEngine, boolean unicodeFlag)
     {
         super(gameSettings, locationFontTexture, renderEngine, unicodeFlag);
     }
-
 
     @Override
     protected void renderStringAtPos(String text, boolean hasShadow){

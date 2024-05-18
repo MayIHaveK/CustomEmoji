@@ -17,7 +17,7 @@ public class Main {
     public static final String MODID = "customemoji";
     public static final String NAME = "Custom Emoji";
 
-    public static final String VERSION = "1.0.0";
+    public static final String VERSION = "1.2.1";
     public static final Logger LOG = LogManager.getLogger(MODID);
 
     @SidedProxy(clientSide = "com.mayihavek.customemoji.proxy.ClientProxy", serverSide = "com.mayihavek.customemoji.proxy.CommonProxy")
